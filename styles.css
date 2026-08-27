@@ -1692,7 +1692,7 @@ footer{
 
     background-image:
         linear-gradient(rgba(31,28,23,.55), rgba(31,28,23,.55)),
-        url("/Photos/ADR01629.jpg");
+        url("Photos/ADR01629.jpg");
 
     background-size:cover;
     background-position:center;

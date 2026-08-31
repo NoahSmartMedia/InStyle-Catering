@@ -154,44 +154,30 @@ img{
 /* Logo */
 
 .logo{
-
+    width: 10vw;
     display:flex;
     align-items:center;
     gap:16px;
 
 }
 
-.logo-mark{
-
-    width:58px;
-    height:58px;
-
-    border-radius:50%;
-
-    background:var(--black);
-
-    color:var(--cream);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:18px;
-    font-weight:700;
-    letter-spacing:2px;
-
-    transition:var(--transition);
-
+/* Tablet */
+@media (max-width: 1024px) {
+    .logo {
+        width: 14vw;
+    }
 }
 
-.logo:hover .logo-mark{
-
-    background:var(--accent);
-    color:var(--black);
-
+/* Mobile */
+@media (max-width: 768px) {
+    .logo {
+        width: 35vw;
+    }
 }
 
-.logo-text{
+
+
+.-text{
 
     display:flex;
     flex-direction:column;

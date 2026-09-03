@@ -251,6 +251,7 @@ img{
 /* Button */
 
 .btn{
+    outline: none; 
 
     background:var(--accent);
 

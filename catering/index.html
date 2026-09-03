@@ -13,6 +13,409 @@
 </head>
 <body>
 
+    <style>
+
+/* ===========================
+   CATERING HERO
+=========================== */
+
+.catering-hero{
+    padding:120px 0 90px;
+}
+
+.catering-hero-inner{
+    max-width:900px;
+}
+
+.catering-hero h1{
+    font-size:clamp(3.5rem, 7vw, 6rem);
+    line-height:.95;
+    max-width:800px;
+    margin:18px 0 28px;
+}
+
+.catering-hero p{
+    max-width:680px;
+    font-size:1.1rem;
+    line-height:1.9;
+    color:rgba(31,28,23,.7);
+}
+
+
+/* ===========================
+   EYEBROW
+=========================== */
+
+.eyebrow{
+    display:inline-block;
+    font-family:var(--body-font);
+    font-size:.78rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--black);
+}
+
+
+/* ===========================
+   CATERING INTRO
+=========================== */
+
+.catering-intro{
+    padding:90px 0;
+    background:var(--blue);
+}
+
+.catering-intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:90px;
+    align-items:start;
+}
+
+.catering-intro-heading{
+    position:relative;
+}
+
+.section-number{
+    display:block;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    opacity:.5;
+}
+
+.catering-intro-heading h2{
+    font-size:clamp(2.8rem, 5vw, 4.5rem);
+    line-height:1;
+}
+
+.catering-intro-copy p{
+    font-size:1.05rem;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+
+/* ===========================
+   MENU SECTION
+=========================== */
+
+.menu-section{
+    padding:120px 0;
+}
+
+.menu-heading{
+    max-width:650px;
+    margin-bottom:65px;
+}
+
+.menu-heading h2{
+    font-size:clamp(3rem, 5vw, 4.5rem);
+    line-height:1;
+    margin:14px 0 20px;
+}
+
+.menu-heading p{
+    color:rgba(31,28,23,.65);
+    font-size:1.05rem;
+}
+
+
+/* ===========================
+   MENU CARDS
+=========================== */
+
+.menu-list{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.menu-card{
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    gap:40px;
+    align-items:center;
+
+    padding:42px 45px;
+
+    background:#fff;
+
+    border:1px solid rgba(31,28,23,.08);
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.menu-card-featured{
+    background:var(--black);
+    color:var(--cream);
+}
+
+.menu-card-featured h3,
+.menu-card-featured li,
+.menu-card-featured p,
+.menu-card-featured .menu-label{
+    color:var(--cream);
+}
+
+
+/* Number */
+
+.menu-card-number{
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:var(--blue);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:var(--heading-font);
+    font-size:1.6rem;
+    font-weight:700;
+
+    color:var(--black);
+}
+
+.menu-card-featured .menu-card-number{
+    background:var(--cream);
+}
+
+
+/* Content */
+
+.menu-label{
+    display:block;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+
+    margin-bottom:10px;
+
+    color:rgba(31,28,23,.55);
+}
+
+.menu-card h3{
+    font-size:2.4rem;
+    margin-bottom:14px;
+}
+
+.menu-card p{
+    max-width:620px;
+    color:rgba(31,28,23,.7);
+    line-height:1.8;
+}
+
+.menu-features{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:10px 22px;
+
+    margin-top:22px;
+
+    list-style:none;
+}
+
+.menu-features li{
+    font-size:.85rem;
+    font-weight:600;
+    color:rgba(31,28,23,.65);
+}
+
+.menu-features li::before{
+    content:"•";
+    margin-right:8px;
+    color:var(--sand);
+}
+
+
+/* ===========================
+   MENU BUTTON
+=========================== */
+
+.menu-card-action{
+    min-width:210px;
+
+    display:flex;
+    justify-content:flex-end;
+}
+
+.menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:24px;
+
+    padding:15px 20px;
+
+    border:1px solid rgba(31,28,23,.2);
+    border-radius:999px;
+
+    font-size:.9rem;
+    font-weight:700;
+
+    transition:var(--transition);
+}
+
+.menu-btn span{
+    font-size:1.1rem;
+    transition:var(--transition);
+}
+
+.menu-btn:hover{
+    background:var(--blue);
+    border-color:var(--blue);
+}
+
+.menu-btn:hover span{
+    transform:translate(3px,-3px);
+}
+
+.menu-card-featured .menu-btn{
+    border-color:rgba(245,238,232,.35);
+    color:var(--cream);
+}
+
+.menu-card-featured .menu-btn:hover{
+    background:var(--cream);
+    color:var(--black);
+    border-color:var(--cream);
+}
+
+
+/* ===========================
+   CUSTOM PACKAGE SECTION
+=========================== */
+
+.catering-note{
+    padding:30px 0 120px;
+}
+
+.catering-note-inner{
+    background:var(--sand);
+
+    padding:65px;
+
+    border-radius:20px;
+
+    display:grid;
+    grid-template-columns:1.2fr 1.3fr auto;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.catering-note h2{
+    font-size:2.8rem;
+    margin-top:8px;
+}
+
+.catering-note p{
+    line-height:1.8;
+    color:rgba(31,28,23,.75);
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .catering-intro-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .menu-card{
+        grid-template-columns:70px 1fr;
+    }
+
+    .menu-card-action{
+        grid-column:2;
+        justify-content:flex-start;
+        margin-top:5px;
+    }
+
+    .catering-note-inner{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .catering-hero{
+        padding:80px 0 60px;
+    }
+
+    .catering-intro{
+        padding:65px 0;
+    }
+
+    .menu-section{
+        padding:80px 0;
+    }
+
+    .menu-card{
+        grid-template-columns:1fr;
+        padding:30px;
+        gap:25px;
+    }
+
+    .menu-card-action{
+        grid-column:1;
+    }
+
+    .menu-card-number{
+        width:55px;
+        height:55px;
+    }
+
+    .menu-card h3{
+        font-size:2rem;
+    }
+
+    .menu-features{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .menu-btn{
+        width:100%;
+    }
+
+    .catering-note{
+        padding-bottom:80px;
+    }
+
+    .catering-note-inner{
+        padding:40px 30px;
+    }
+
+}
+
+</style>
+
 <header class="header">
     <div class="container">
 
@@ -35,6 +438,214 @@
 
     </div>
 </header>
+
+
+    <main>
+
+    <section class="catering-hero">
+        <div class="container catering-hero-inner">
+
+            <span class="eyebrow">Catering Services</span>
+
+            <h1>Catering Made for the Occasion.</h1>
+
+            <p>
+                From corporate lunches and business functions to weddings and private celebrations,
+                InStyle Catering delivers thoughtfully prepared food and flexible catering options
+                designed around your event.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="catering-intro">
+
+        <div class="container catering-intro-grid">
+
+            <div class="catering-intro-heading">
+                <span class="section-number">01</span>
+                <h2>Food That Fits Your Event</h2>
+            </div>
+
+            <div class="catering-intro-copy">
+                <p>
+                    Every event is different, which is why our catering options are designed to be
+                    flexible. Whether you're feeding a small office team, planning a large corporate
+                    event or celebrating a wedding, our menus can be tailored to suit the occasion.
+                </p>
+
+                <p>
+                    Explore our catering menus below to find the package that best suits your event.
+                    If you're unsure which option is right for you, get in touch and our team can
+                    help you plan it.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="menu-section">
+
+        <div class="container">
+
+            <div class="menu-heading">
+                <span class="eyebrow">Our Menus</span>
+                <h2>Choose Your Catering Style</h2>
+                <p>
+                    View our current catering packages and menu options.
+                </p>
+            </div>
+
+
+            <div class="menu-list">
+
+                <!-- CORPORATE -->
+                <article class="menu-card">
+
+                    <div class="menu-card-number">
+                        <span>01</span>
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-label">Business & Events</span>
+
+                        <h3>Corporate Catering</h3>
+
+                        <p>
+                            Fresh and professional catering for meetings, conferences, office lunches,
+                            training days and corporate functions.
+                        </p>
+
+                        <ul class="menu-features">
+                            <li>Breakfast & morning tea</li>
+                            <li>Lunch platters & packages</li>
+                            <li>Corporate functions</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="menu-card-action">
+                        <a href="../pdf/corporate-catering.pdf"
+                           target="_blank"
+                           class="menu-btn">
+                            View Corporate Menu
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- WEDDINGS -->
+                <article class="menu-card menu-card-featured">
+
+                    <div class="menu-card-number">
+                        <span>02</span>
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-label">Weddings & Celebrations</span>
+
+                        <h3>Wedding Packages</h3>
+
+                        <p>
+                            Thoughtfully designed wedding catering packages for intimate celebrations,
+                            large receptions and everything in between.
+                        </p>
+
+                        <ul class="menu-features">
+                            <li>Canapé selections</li>
+                            <li>Shared & plated dining</li>
+                            <li>Custom wedding packages</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="menu-card-action">
+                        <a href="../pdf/wedding-packages.pdf"
+                           target="_blank"
+                           class="menu-btn">
+                            View Wedding Menu
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- PRIVATE EVENTS -->
+                <article class="menu-card">
+
+                    <div class="menu-card-number">
+                        <span>03</span>
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-label">Parties & Functions</span>
+
+                        <h3>Private Events</h3>
+
+                        <p>
+                            Flexible catering for birthdays, engagements, anniversaries, family
+                            celebrations and private functions across Adelaide.
+                        </p>
+
+                        <ul class="menu-features">
+                            <li>Finger food & canapés</li>
+                            <li>Buffet options</li>
+                            <li>Private celebrations</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="menu-card-action">
+                        <a href="../pdf/private-events.pdf"
+                           target="_blank"
+                           class="menu-btn">
+                            View Events Menu
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="catering-note">
+
+        <div class="container catering-note-inner">
+
+            <div>
+                <span class="eyebrow">Need Something Different?</span>
+                <h2>Looking for a Custom Package?</h2>
+            </div>
+
+            <p>
+                Our menus are a starting point. If your event has specific requirements,
+                dietary needs or a particular service style in mind, we can work with you
+                to create a more tailored catering solution.
+            </p>
+
+            <a href="../contact/" class="btn">
+                Talk to Our Team
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
 
 
 
